@@ -1,5 +1,4 @@
 import * as Next from 'next'
-import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { User } from '../models'
@@ -11,7 +10,7 @@ interface Props {
   user: User[]
 }
 
-const Home: StatelessComponent<Props> = (props) => {
+const Home: Next.NextComponentType<Props> = (props) => {
   const { users }: any = props
 
   return (

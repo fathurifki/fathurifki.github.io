@@ -2,6 +2,7 @@ import { withRouter } from 'next/router';
 import { UserDetail } from '../models';
 import { StatelessComponent } from 'react';
 import { fetchUsers, fetchUserDetail } from '../rest-api/github';
+import { NextComponentType } from 'next';
 
 
 interface Props {
@@ -18,7 +19,7 @@ interface Props {
 //     )
 // })
 
-const UserInfo: StatelessComponent<Props> = props => {
+const UserInfo: NextComponentType<Props> = (props: any) => {
     return (
         <div>
             <h2>I'm the user infopage</h2>
@@ -31,7 +32,7 @@ const UserInfo: StatelessComponent<Props> = props => {
     )
 }
 
-UserInfo.getInitialProps = async props =>{
+UserInfo.getInitialProps = async (props:any) =>{
     const login = props.query.login as string
     const userDetail = await fetchUserDetail(login)
 
