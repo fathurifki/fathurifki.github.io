@@ -1,0 +1,20 @@
+languange: node_js
+node_js:
+- '12'
+cache:
+  yarn: true
+  directories:
+  - public
+  - ".cache"
+script:
+- yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: main
+env:
+  global:
+    secure: v/X9iF9GaAx8fblK8b5teyBOjM5bVnNL/O+emzjZmoowRQ6uSzxngDgW09JMhSX0ZfTFQ38SA/+L7LMPjMfiEsZOpO+Rj0eeARbAO55Iq4QQE5OY3hjPISzSrctwDE6ycVMOKooJZpCd6mNJuaILDQvwWPVTO5gI5DTvllpYxCPOyOa89ZWBd4PzSFbcSuMQOt0HtHyylBWcObSYdMuOD9jNmHDigKXANZ5yqQoytss0/+Fmg6AWxu90DD+al+OslhKsOK2u2YiUjGnYm0sNXmwXLgvxxl17KTIoijx581RghlEIFNQLxoK3vT6p8so1WwwDgAblXDCl94/PrqQh7ykMYv2+1Tm+honmCQZYGaK1De5v2t9G/u8W4REfITaVvIibZ5BqxQGadDYYZpLznqY8LAxpCD47jHgspPMo46qs9T/ybqQttflez6gjvoSW4CWFjXQ15e/a/L9AU9/kzA5QO6TLgjlvNqKn6dPYs9yPj8TGcP7mzEl8xWyn/TBjFMdvQd943XULoBw57RzqJ6kdE4Skx3+8T6UMii9StHDy3TsviO4XCxdRQPa+ighA6g5kCp14/76sokFE/lL01EYAz1pK4aOiO4bjs7ocLaR7HTlfX8Pw/vclB6aTybf/x/VS2My8u2gmJmPLMbJuyEgb1sTqWBCjlZIvNtvqcr0=
