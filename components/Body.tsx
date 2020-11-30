@@ -5,7 +5,7 @@ import { Header } from './Header';
 import { Row } from './Row';
 
 interface Props {
-    users: User;
+    users: User[];
 }
 
 export const Table: StatelessComponent<Props> = (props) => (
