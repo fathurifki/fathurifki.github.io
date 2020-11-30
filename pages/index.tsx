@@ -12,12 +12,12 @@ interface Props {
 }
 
 const Home: StatelessComponent<Props> = (props) => {
-  const [user] = React.useState(props.users)
+  const { users }: any = props
 
   return (
     <div className={styles.container}>
       <p>Hello Next.Js</p>
-      <Table users={user} />
+      <Table users={users} />
       <Link href="/user-info">
         <a>Navigate to user info page</a>
       </Link>
@@ -27,8 +27,6 @@ const Home: StatelessComponent<Props> = (props) => {
 
 Home.getInitialProps = async () => {
   const users = await fetchUsers();
-  console.log('USERS', users)
-
   return {
     users,
   }
