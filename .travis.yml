@@ -6,10 +6,13 @@ cache:
   directories:
   - public
   - ".cache"
+
 install:
-  - yarn install
+  - yarn
+
 script:
   - yarn build
+  
 deploy:
   provider: pages
   skip-cleanup: true
