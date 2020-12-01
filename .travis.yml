@@ -1,0 +1,17 @@
+languange: node_js
+node_js:
+- '12'
+cache:
+  yarn: true
+  directories:
+  - public
+  - ".cache"
+script:
+- yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: main
