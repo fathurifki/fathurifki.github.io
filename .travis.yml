@@ -7,9 +7,6 @@ cache:
   - public
   - ".cache"
 
-install:
-  - npm run build
-
 script:
   - npm run build
   - npm run export
