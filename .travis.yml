@@ -8,15 +8,18 @@ cache:
   - ".cache"
 
 install:
-  - yarn
+  - npm run build
 
 script:
-  - yarn run build
+  - npm run build
+  - npm run export
+  - touch out/.nojekyll
 
 deploy:
   provider: pages
   skip-cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
+  local_dir: out
   on:
     branch: main
