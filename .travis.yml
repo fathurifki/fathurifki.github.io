@@ -11,8 +11,8 @@ install:
   - yarn
 
 script:
-  - yarn build
-  
+  - yarn run build
+
 deploy:
   provider: pages
   skip-cleanup: true
